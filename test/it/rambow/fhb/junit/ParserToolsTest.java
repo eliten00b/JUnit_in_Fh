@@ -26,7 +26,7 @@ public class ParserToolsTest {
 
 	@Test
 	public final void testEmailWorksWith4LetterDomain() {
-		assertFalse(ParserTools.isEmail("bla@dawanda.info"));
+		assertTrue(ParserTools.isEmail("bla@dawanda.info"));
 	}
 
 	@Test
@@ -41,33 +41,21 @@ public class ParserToolsTest {
 
 	@Test
 	public final void testEmailWithoutDomain() {
-//		assertFalse(ParserTools.isEmail("test@dawanda"));
+		assertFalse(ParserTools.isEmail("test@dawanda"));
 	}
 
 	@Test
 	public final void testEmailTooShort() {
-//		assertTrue(ParserTools.isEmail("t@dawanda.com"));
+		assertFalse(ParserTools.isEmail("t@dawanda.com"));
 	}
 	
 	@Test
 	public final void testEmailWith4LengthDomain() {
-//		assertTrue(ParserTools.isEmail("t@dawanda.info"));
+		assertTrue(ParserTools.isEmail("test@dawanda.info"));
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	@Test
  	public final void testHyphenEmail() {
-//		assertTrue(ParserTools.isEmail("test@fh-brandenburg.de"));
+		assertTrue(ParserTools.isEmail("test@fh-brandenburg.de"));
 	}
 }
