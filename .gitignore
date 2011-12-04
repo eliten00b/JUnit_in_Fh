@@ -1,1 +1,5 @@
 bin/*
+cob-instr/*
+cob-rep/*
+reports/*
+classes/*
